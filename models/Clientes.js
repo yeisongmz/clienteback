@@ -21,7 +21,8 @@ const clientesSchema = new Schema({
         type: String,
         unique: true,
         lowercase: true,
-        trim: true
+        trim: true,
+        required: true
     },
     telefono: {
         type: String,

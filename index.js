@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = require('./routes');
 const moongose = require('mongoose');
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 
 //conectar con mongo
 moongose.Promise = global.Promise;

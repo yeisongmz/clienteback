@@ -29,7 +29,7 @@ exports.getClientes = async (req, res, next) => {
 }
 
 // muestra un cliente por su id
-exports.getCiente = async (req, res, next) => {
+exports.getCienteById = async (req, res, next) => {
         const cliente = await Clientes.findById(req.params.idCliente);
         if (!cliente){
             res.json({mensaje: 'Ese cliente no existe'});
