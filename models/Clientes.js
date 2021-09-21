@@ -1,12 +1,19 @@
 const moongose = require('mongoose');
 const Schema = moongose.Schema;
 
-const clientesShema = new Schema({
+const clientesSchema = new Schema({
     nombre : {
         type: String,
         trim: true
     },
     apellido : {
+        type: String,
+        trim: true
+    },
+    fechaCreacion: { 
+        type: Date, 
+        default: Date.now },
+    empresa: {
         type: String,
         trim: true
     },
@@ -17,9 +24,9 @@ const clientesShema = new Schema({
         trim: true
     },
     telefono: {
-        type: Strim,
+        type: String,
         trim: true
     }
 });
 
-module.exports = moongose.model('Clientes', clientesSchema)
+module.exports = moongose.model('Clientes', clientesSchema);

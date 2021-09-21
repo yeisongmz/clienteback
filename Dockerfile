@@ -4,5 +4,5 @@ EXPOSE 5000
 WORKDIR /app
 ADD package.json /app/
 RUN npm install 
-CMD ["node", "index.js"]
+CMD ["npm","start"]
 ADD . /app 

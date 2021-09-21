@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+
+  backends:
+    image: clientebackend-image
+    build: ./
+    container_name: clientebackend
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes: 
+      - ./:/app
+    command: sh -c "npm install && npm start"
+
+networks:
+  todo-networks:
