@@ -59,6 +59,9 @@ module.exports = function(){
     // obtener por id
     router.get('/pedidos/:idPedido', pedidosController.getPedidosById);
 
+    router.put('/pedidos/:idPedido', pedidosController.updatePedido);
+
+    router.delete('/pedidos/:idPedido', pedidosController.deletePedido);
 
     return router;
 }
